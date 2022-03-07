@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="proName">
+<button onclick = add()>Thêm</button>
+<div id="list">
+
+
+</div>
+
+<script>
+
+    let arr = ["S22 Ultra", "Iphone 13 Pro Max", "XiaoMi Note N+1"];
+
+    function display() {
+        let rs = "<h2>" + arr.length + " sản phẩm</h2>";
+        for (let i = 0; i < arr.length; i++) {
+            rs += "<h4>" + arr[i] + "<h4>";
+        }
+
+        document.getElementById("list").innerHTML = rs;
+    }
+
+
+    function add() {
+        let productName = document.getElementById("proName").value;
+        arr.push(productName);
+        display();
+    }
+
+    display();
+
+</script>
+</body>
+</html>

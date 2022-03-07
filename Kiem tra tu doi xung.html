@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+
+    function isPalidrome(str) {
+        if (str.length <= 1) {
+            return true;
+        } else {
+            if (str[0] != str[str.length - 1]) {
+                return false;
+            }
+            return isPalidrome(str.substring(1, str.length - 1));
+        }
+    }
+
+    document.write(isPalidrome("12321"));
+
+</script>
+
+</body>
+</html>
